@@ -1,17 +1,18 @@
 .header{
-  margin-left: 200px;
+  margin-left: 250px;
 }
 
 .title{
-  font-size: 60px;
+  font-size: 45px;
   font-family: 'QuincyCFBold';
   color: rgb(43, 44, 110);
 }
+
 .tagLine{
   font-family: "Larsseit Medium";
   color: rgb(25, 20, 43);
-  margin-top:-40px;
-  margin-bottom:40px;
+  margin-top:-20px;
+  margin-bottom:35px;
   font-size: 20px;
   font-weight: bold;
 }
@@ -29,7 +30,7 @@
   list-style: none;
   padding: 0;
   display: flex;
-  margin-left: 200px;
+  margin-left: 250px;
   /* justify-content: center; */
 }
 
@@ -47,7 +48,40 @@
   cursor: pointer;
 }
 
+.navbar .active {
+    margin-bottom: -100px;   
+    padding-bottom: 8px;
+    border-bottom: 4px solid rgb(255, 255, 255);
+    outline: none; /* Remove the default focus outline */
+}
+
 .content {
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 250px;
+  margin-right: 250px;    
+}
+
+.section{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: 10px;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 0px auto;
+  max-width: 1440px;
+  padding: 16px 80px;
+}
+
+.roundedImage {
+  border-radius: 20px; 
+}
+
+.itemDescription{
+  display: block;
+  width: 400px;
+  font-size: 17px;
+  line-height: 19px;
+  font-family: CamptonSemiBold;
+  color: rgb(43, 44, 110);
 }

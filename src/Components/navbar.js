@@ -9,12 +9,12 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const sectionIds = ['section1', 'section2', 'section3'];
+    const sectionIds = ['CoffeeTables', 'SideTables', 'MediaUnits', 'TableSets'];
 
     const handleScroll = () => {
       for (let i = sectionIds.length - 1; i >= 0; i--) {
         const section = document.getElementById(sectionIds[i]);
-        if (section.getBoundingClientRect().top <= 0) {
+        if (section.getBoundingClientRect().top <= 0 && section.getBoundingClientRect().bottom >= 0) {
           setActiveSection(sectionIds[i]);
           break;
         }
@@ -33,41 +33,54 @@ const Navbar = () => {
       <ul>
         <li>
           <Link
-            to="section1"
+            to="CoffeeTables"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
             onSetActive={handleSetActive}
-            className={activeSection === 'section1' ? 'active' : ''}
+            className={activeSection === 'CoffeeTables' ? 'active' : ''}
           >
-            Section 1
+            Coffee Tables
           </Link>
         </li>
         <li>
           <Link
-            to="section2"
+            to="SideTables"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
             onSetActive={handleSetActive}
-            className={activeSection === 'section2' ? 'active' : ''}
+            className={activeSection === 'SideTables' ? 'active' : ''}
           >
-            Section 2
+            Side Tables
           </Link>
         </li>
         <li>
           <Link
-            to="section3"
+            to="MediaUnits"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
             onSetActive={handleSetActive}
-            className={activeSection === 'section3' ? 'active' : ''}
+            className={activeSection === 'MediaUnits' ? 'active' : ''}
           >
-            Section 3
+            Media Units
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="TableSets"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            onSetActive={handleSetActive}
+            className={activeSection === 'TableSets' ? 'active' : ''}
+          >
+            Table Sets
           </Link>
         </li>
       </ul>
